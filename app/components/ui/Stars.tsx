@@ -1,3 +1,5 @@
+import React from "react";
+
 /**
  * Stars component for displaying ratings
  */
@@ -10,7 +12,7 @@ interface StarsProps {
 export default function Stars({ rating, className = "", starClassName = "" }: StarsProps) {
   const fullStars = Math.floor(rating);
   const hasHalfStar = rating % 1 !== 0;
-  const stars: JSX.Element[] = [];
+  const stars: React.ReactElement[] = [];
 
   for (let i = 0; i < fullStars; i++) {
     stars.push(
